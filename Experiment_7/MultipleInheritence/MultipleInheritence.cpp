@@ -10,7 +10,7 @@ public :
         if(am != 0)
         {
             amount = am;
-            cout<<"\n amount is\t"<<am;
+            cout<<"\n\n Amount Is "<<am;
         }
         else
             cout<<"\n Enter Valid Input for Fixed Deposit";

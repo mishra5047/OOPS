@@ -24,7 +24,7 @@ public:
 
     User(string dep, int n, string na){
         id = n;
-        name = n;
+        name = na;
         department = dep;
     }
 
@@ -49,7 +49,7 @@ public:
         User us_2("ABC", "XYZ", 2);
         us_2.printDetails();
 
-        User us_3("DEF", 3,"BVY");
+        User us_3("DEF", 3,"BCA");
         us_3.printDetails();
     }
 };

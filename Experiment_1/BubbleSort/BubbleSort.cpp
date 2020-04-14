@@ -34,7 +34,7 @@ class BubbleSort{
             }
 
     void print(){
-    cout<<"\n Elements After Sorting Are";
+    cout<<"\n Elements After Sorting Are \n";
         for(int i  = 0; i < n; i++)
         cout<<" "<<arr[i];
     }

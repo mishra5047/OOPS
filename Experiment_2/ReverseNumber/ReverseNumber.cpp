@@ -33,11 +33,12 @@ using namespace std;
 
        Reverse reverse;
        int i = reverse.reverse(no);
-        cout<<i;
+        cout<<"The Number after reverse is "<<i;
     }
     };
 
     int main(){
     Console console;
+    console.details();
     console.input();
     }

@@ -43,7 +43,7 @@ public :
 
 class Console{
 public:
-    void details()
+    void details(){
     cout<<"\n\t Abhishek Mishra \n";
     cout<<"\n\t    06-CSE-A \n";
     }

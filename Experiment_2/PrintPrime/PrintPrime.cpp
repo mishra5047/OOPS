@@ -40,6 +40,7 @@ public:
         }
 
 };
+
 int main()
 {
     Console console;

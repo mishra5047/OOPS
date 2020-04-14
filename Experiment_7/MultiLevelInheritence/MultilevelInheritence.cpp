@@ -3,11 +3,11 @@
 using namespace std;
 
 class Bank{
-
-public:
     string Name;
     string Branch;
     int id;
+
+public:
 
     void EnterDetails(string nam, string bran, int i){
         Name = nam;
@@ -16,7 +16,7 @@ public:
     }
 
     void showDetails(){
-        cout<<"\n Name is \t"<<Name;
+        cout<<"\n\n Name is \t"<<Name;
         cout<<"\n Branch is \t"<<Branch;
         cout<<"\n Id is \t"<<id;
     }
@@ -36,12 +36,11 @@ public:
     void showAcc(){
         cout<<"\n Account Name is "<<Acc_Name;
         cout<<"\n Age is \t"<<age;
-        showDetails();
     }
 
 };
 
-class FixedDeposit : public Bank{
+class FixedDeposit : public Account{
 
 public :
     int amount;
@@ -50,42 +49,32 @@ public :
         amount = 0;
     }
 
-    void setDeposit(int am){
+    FixedDeposit(int am){
         if(am != 0)
             amount = am;
     }
-    void showDetails(){
-        cout<<"\n Name is \t"<<Name;
-        cout<<"\n Branch is \t"<<Branch;
-        cout<<"\n Id is \t"<<id;
-    }
-};
-
-class ViewData : public Account ,public FixedDeposit{
-
-public:
-    void print(){
+    void showDetail(){
+        cout<<"\n Amount Is\t"<<amount;
         showAcc();
     }
 };
+
 class Console{
 public:
     void details(){
         cout<<"\n\t Abhishek Mishra \n";
         cout<<"\n\t    06-CSE-A \n";
     }
-
 };
 
-int main() {
+int main(){
 
     Console console;
     console.details();
 
-    Bank *bank;
-    FixedDeposit depo;
-    bank = &depo;
-
-    bank->showDetails();
+    FixedDeposit deposit(5);
+    deposit.setAcc("abc", 9);
+    deposit.showDetail();
+    deposit.EnterDetails("xyz", "west", 10);
+    deposit.showDetails();
 }
-

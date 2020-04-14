@@ -48,7 +48,7 @@ public :
             amount = am;
     }
     void showDetail(){
-        cout<<"\n amount is\t"<<amount;
+        cout<<"\n\n Amount Is\t"<<amount;
         showDetails();
     }
 };
