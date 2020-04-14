@@ -5,40 +5,40 @@ using namespace std;
 class LinearSearch{
 public:
 
-    int Search(int arr[],int item){
-        for(int i = 0; i <= sizeof(arr); i++){
-            if(arr[i] == item ) return i+1;
+    int Search(int arr[],int item, int length) {
+        for (int i = 0; i < length; i++) {
+            if (arr[i] == item) return i + 1;
         }
         return 0;
     }
-
 };
 
 class Console{
     int ar[10];
 public:
     void takeInput(){
-
-        int ele;
-        cout<<"Enter the elements\n";
-        for(int i = 0; i < 10; i++)
+        int ele, len;
+        cout<<"Enter the number of elements\n";
+        cin>>len;
+        cout<<"\n Enter the elements\n";
+        for(int i = 0; i < len; i++)
             cin>>ar[i];
-
-        cout<<"Enter the element to Search \t\t";
+        cout<<"Enter the element to Search \n";
         cin>>ele;
-        search(ar, ele);
+        search(ar, ele, len);
     }
-    void search(int arr[], int ele){
+    void search(int arr[], int ele, int length){
         LinearSearch linear;
-        int s = linear.Search(ar, ele);
-        if(s != 0) cout<<"element found at \t"<<s;
+        int s = linear.Search(ar, ele, length);
+        if(s == 0) cout<<"not found";
+
         else
-            cout<<"not found";
+            cout<<"\n Element Found At Position "<<s;
     }
 
     void details(){
         cout<<"\n\t Abhishek Mishra \n";
-        cout<<"\n\t 06-CSE-A \n\n";
+        cout<<"\n\t    06-CSE-A \n";
     }
 
 };

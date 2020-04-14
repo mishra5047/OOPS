@@ -20,7 +20,8 @@ public:
 class Console{
     public:
         void details(){
-            cout<<"\n\n\t Abhishek Mishra \n\n\t   06-CSE-A\n";
+            cout<<"\n\t Abhishek Mishra \n";
+            cout<<"\n\t    06-CSE-A \n";
         }
 
     };

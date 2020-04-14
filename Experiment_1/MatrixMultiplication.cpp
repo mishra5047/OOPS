@@ -62,8 +62,8 @@ public:
      mat.input(r1, r2, c1,c2);
  }
     void details(){
-        cout<<"\n\n\t Abhishek Mishra";
-        cout<<"\n 06-CSE-A\n";
+        cout<<"\n\t Abhishek Mishra \n";
+        cout<<"\n\t    06-CSE-A \n";
     }
 };
 int main()

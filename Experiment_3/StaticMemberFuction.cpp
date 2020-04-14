@@ -29,9 +29,8 @@ int Bank::id = 10;
 class Console{
 public:
     void details(){
-        cout<<"\n\t Static Member Functions\n";
         cout<<"\n\t Abhishek Mishra \n";
-        cout<<"\n\t 06-CSE-A \n";
+        cout<<"\n\t    06-CSE-A \n";
     }
 };
 

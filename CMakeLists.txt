@@ -3,4 +3,4 @@ project(OOPS)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(OOPS Experiment_4/FriendFunction.cpp)
+add_executable(OOPS Experiment_2/Armstrong.cpp)
