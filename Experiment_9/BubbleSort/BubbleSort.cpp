@@ -40,6 +40,7 @@ class BubbleSort{
     }
 };
 
+
 class Console{
 public:
     void details(){
