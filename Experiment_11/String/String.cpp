@@ -16,7 +16,7 @@ public:
     }
 
     void show() {
-        cout << s;
+        cout << s<<endl;
     }
     ~String();
 };

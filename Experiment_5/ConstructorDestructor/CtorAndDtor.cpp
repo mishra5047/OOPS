@@ -8,6 +8,7 @@ class String
 private:
     char *s;
     int size;
+
 public:
     String(char *arr) {
         size = strlen(arr);

@@ -2,44 +2,21 @@
 
 using namespace std;
 
-class BubbleSort{
-    int arr[20] , swap;
-    int n;
+    template <typename T>
+    T sort(T arr[]) {
+        int n = sizeof(arr);
 
-    public:
-
-    BubbleSort(int num){
-        n = num ;
-    }
-
-    void input(){
-        cout<<"\n Enter The Elements  \n";
-        for(int i = 0; i < n; i++)
-            cin>>arr[i];
-        sort();
-        print();
-    }
-
-    void sort(){
-        for(int c=0 ; c < n-1 ; c++)
-        {
-            for(int d = 0 ; d <n-c-1 ; d++)
-            {
-                if(arr[d]>arr[d+1])
-                {
-                    swap =arr[d];
-                    arr[d]=arr[d+1];
-                    arr[d+1]=swap;
-                }}}
+        for (int c = 0; c < n - 1; c++) {
+            for (int d = 0; d < n - c - 1; d++) {
+                if (arr[d] > arr[d + 1]) {
+                    int swap;
+                    swap = arr[d];
+                    arr[d] = arr[d + 1];
+                    arr[d + 1] = swap;
+                }
             }
-
-    void print(){
-    cout<<"\n Elements After Sorting Are \n";
-        for(int i  = 0; i < n; i++)
-        cout<<" "<<arr[i];
+        }
     }
-};
-
 
 class Console{
 public:
@@ -49,12 +26,39 @@ public:
     }
 
     void in(){
+        int a;
         int ele;
-        cout<<"\n Enter The Number Of Elements \n";
-        cin>>ele;
-        BubbleSort bubble(ele);
-        bubble.input();
-    }
+        cout<<"Enter Your Choice \n 1. Integers \n 2. Characters \n";
+        cin>>a;
+        if(a == 1){
+            cout << "\n Enter The Number Of Elements \n";
+            cin >> ele;
+            int arr[ele];
+            cout << "Enter The Elements \n";
+            for (int i = 0; i < ele; i++) {
+                cin >> arr[i];
+            }
+            sort(arr);
+            cout << "Sorted Array is \n";
+            for (int j = 0; j < ele; j++) {
+                cout << arr[j] << "\t";
+            }
+        }
+        else {
+            cout<<"\n Enter The Number Of Elements \n";
+            cin>>ele;
+            char arr[ele];
+            cout<<"Enter The Elements \n";
+            for (int i = 0; i < ele ; i++) {
+                cin>>arr[i];
+            }
+            sort(arr);
+
+            cout<<"Sorted Array is \n";
+            for (int j = 0; j < ele ; j++) {
+                cout<<arr[j]<<"\t";
+            }
+        }    }
 };
 
 int main()

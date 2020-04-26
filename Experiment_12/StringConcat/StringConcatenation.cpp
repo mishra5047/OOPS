@@ -14,7 +14,7 @@ public:
 
         a_1[a] = '\0';
 
-        cout<<"\n Concatenated String is "<<a_1;
+        cout<<"\n Concatenated String is "<<a_1<<endl;
     };
 };
 

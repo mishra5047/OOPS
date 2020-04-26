@@ -15,7 +15,7 @@ public:
     }
 
     void print(){
-        cout<<"\n sum is "<<a;
+        cout<<"\n Sum Is = "<<a;
     }
 };
 
@@ -32,7 +32,7 @@ public:
         cin>>a>>b;
         Addition s(a), s_1(b);
         Addition sum = s + s_1;
-        st.print();
+        sum.print();
     }
 };
 

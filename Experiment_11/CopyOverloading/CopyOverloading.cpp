@@ -17,7 +17,7 @@ public:
     }
 
     void show() {
-        cout <<"Value Is"<<s<<endl;
+        cout <<"\n Value Is "<<s<<endl;
     };
 };
 

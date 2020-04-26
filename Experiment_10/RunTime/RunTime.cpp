@@ -18,7 +18,7 @@ public:
     virtual void showDetails(){
         cout<<"\n Name is \t"<<Name;
         cout<<"\n Branch is \t"<<Branch;
-        cout<<"\n Id is \t\t"<<id;
+        cout<<"\n Id is \t\t"<<id<<endl;
     }
 };
 
@@ -41,34 +41,6 @@ public:
 
 };
 
-class FixedDeposit : public Bank{
-
-public :
-    int amount;
-
-    FixedDeposit(){
-        amount = 0;
-    }
-
-    void setDeposit(int am){
-        if(am != 0)
-            amount = am;
-    }
-    virtual void showDetails(){
-        cout<<"\n Name is \t"<<Name;
-        cout<<"\n Branch is \t"<<Branch;
-        cout<<"\n Id is \t"<<id;
-    }
-};
-
-class ViewData : public Account ,public FixedDeposit{
-
-public:
-    void print(){
-        showAcc();
-    }
-};
-
 class Console{
 public:
     void details(){
@@ -76,16 +48,17 @@ public:
         cout<<"\n\t    06-CSE-A \n";
     }
 
+    void input(){
+        Bank *bank;
+        Account depo;
+        bank = &depo;
+        bank->enterDetails("abc", "xyz", 10);
+        bank->showDetails();
+    }
 };
 
 int main() {
     Console console;
     console.details();
-
-    Bank *bank;
-    FixedDeposit depo;
-    bank = &depo;
-    bank->enterDetails("abc", "xyz", 10);
-    bank->showDetails();
-
+    console.input();
 }

@@ -31,6 +31,7 @@ public:
     void input(){
         string a,b;
         cout<<"Enter The Two Strings \n";
+
         cin>>a>>b;
         String s(a), s_1(b);
         String st = s + s_1;
