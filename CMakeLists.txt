@@ -3,4 +3,4 @@ project(OOPS)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(OOPS Experiment_12/StringVowels/StringVowels.cpp)
+add_executable(OOPS Experiment_12/FileReadAndWrite/FileReadAndWrite.cpp)

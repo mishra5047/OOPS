@@ -1,15 +1,16 @@
 #include <iostream>
 #include <fstream>
+#include <string.h>
 
 using namespace std;
 
 class Bank{
-    string Name;
-    string Branch;
+    char Name[10];
+    char Branch[5];
     int id;
 
 public:
-
+    void print();
     void enterDetails();
     void findMember();
 };
@@ -17,56 +18,41 @@ public:
 void Bank::enterDetails(){
     fstream fstream1;
     Bank bank;
-    fstream1.open("Third.txt", ios::trunc);
+    fstream1.open("Third.txt", ios::out);
 
-    string name = "ABC";
-    string branch = "WEST";
+    char name[] = "ABC";
+    char branch[] = "WEST";
     int i = 10;
 
-    bank.Name = name;
-    bank.Branch = branch;
-    bank.id = i;
-//    fstream1.write((char*)&bank, sizeof(bank));
-
-    name = "XYZ";
-    branch = "EAST";
-    i = 15;
-
-    bank.Name = name;
-    bank.Branch = branch;
-    bank.id = i;
-//    fstream1.write((char*)&bank, sizeof(bank));
-
-    name  = "DEF";
-    branch = "NORTH";
-    i = 20;
-
-    bank.Name = name;
-    bank.Branch = branch;
+    strcpy(bank.Name,name);
+    strcpy(bank.Branch,branch);
     bank.id = i;
     fstream1.write((char*)&bank, sizeof(bank));
 
+  fstream1.close();
 }
-
+void Bank:: print(){
+    cout<<"\n Contents Of The Text File are \n";
+    cout<<Name<<endl;
+    cout<<Branch<<endl;
+    cout<<id<<endl;
+}
     void Bank::findMember() {
-        cout << fstream("Third.txt").rdbuf();
-    }
-//        int mem = 0;
-//    string name;
-//
-//    fstream1.open("Input.txt", ios::in);
-//    Bank bank;
-//    fstream1.read((char*)&bank, sizeof(bank));
-//
-//    while(!fstream1.eof()) {
-//        if (bank.id == 15)
-//            name = bank.Name;
-//
-//        else
-//            fstream1.read((char*)&bank, sizeof(bank));
-//    }
-//        return name;
 
+    char ch;
+
+    Bank bank;
+
+    fstream fstream_1 ;
+
+    fstream_1.open("Third.txt", ios::in);
+    fstream_1.read((char*)&bank, sizeof(bank));
+
+    while(!fstream_1.eof()) {
+        fstream_1.read((char *) &bank, sizeof(bank));
+        bank.print();
+    }
+}
 
 class Console{
 public:
